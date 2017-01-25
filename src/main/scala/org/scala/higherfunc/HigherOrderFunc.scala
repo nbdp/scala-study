@@ -35,6 +35,15 @@ object HigherOrderFunc {
 
     val value11 = "Happy new year , what is you wish".split(" ").sortWith(_.length < _.length) //输出一个按长度递增排序的数组
 
+    //********闭包********* 每一个返回的函数都有自己的factor的设置
+    val value12 = mulBy(3) //闭包
+    val value13 = mulBy(0.5) //闭包
+    val value14 = value12(9)
+    val value15 = value13(14)
+    //********闭包********
+
+    val value16 = (x: Int, y: Int) => x * y
+
     println(value1)
     println(math.floor(num))
     println("函数传递：" + value2.mkString(" "))
@@ -46,6 +55,11 @@ object HigherOrderFunc {
     println("filter 方法输出所有匹配特定条件的元素:" + value9)
     println("reduceLeft:" + value10)
     println("sortWith:" + value11.mkString(" "))
+
+    println("闭包:" + value14)
+    println("闭包:" + value15)
+
+    println(value16(3, 6))
   }
 
   def triple(x: Double) = 3 * x //等同于上面的匿名函数
