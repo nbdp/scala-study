@@ -1,22 +1,22 @@
-package org.scala.base
+package org.scala.array
 
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Sorting
 
 /**
- * Êý×éÊ¾Àý²âÊÔ
+ * ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * User: shijingui
  * Date: 2017/1/23
  */
 object ArrayTest {
   def main(args: Array[String]) {
-    //³õÊ¼´´½¨Ò»¸öÖ¸¶¨³¤¶ÈµÄÊý×é,Êý×éµÄ³¤¶ÈÊÇ¹Ì¶¨µÄ£¬²»ÈÝÒ×À©Õ¹
+    //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½Ç¹Ì¶ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹
     val array1 = new Array[String](3);
     val array2 = Array("what", "is", "your")
     array1(0) = "what"
     array1(1) = "is"
     array1(2) = "your"
-    //array1(3)="name"//Ö´ÐÐµ½Õâ¶ù¾Í»á±¨Êý×éÔ½½çµÄÒì³£
+    //array1(3)="name"//Ö´ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½Í»á±¨ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½ï¿½ì³£
     for (i <- array1) print(i + " ")
     println()
 
@@ -61,10 +61,10 @@ object ArrayTest {
     val eles = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
     val newArr = for (ele <- eles) yield ele * 2
     println()
-    print("Ô­Ê¼¼¯ºÏ£º")
+    print("Ô­Ê¼ï¿½ï¿½ï¿½Ï£ï¿½")
     for (e <- eles) print(e + " ")
     println()
-    print("²úÉúµÄÐÂ¼¯ºÏ£º")
+    print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ï£ï¿½")
     for (e <- newArr) print(e + " ")
 
     val conditionOper = for (e <- eles if e % 2 == 0) yield e * 2
