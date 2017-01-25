@@ -2,8 +2,8 @@ package org.scala.string
 
 /**
  * String operate use
- * Scala�Ľ������ڽ�����������(function arguments)ʱ�����ַ�ʽ���ȼ���������ʽ��ֵ(reduce the arguments)����Ӧ�õ������ڲ���
- * �����ǽ�δ����Ĳ������ʽֱ��Ӧ�õ������ڲ���ǰ�߽�����ֵ���ã�call-by-value�������߽����������ã�call-by-name����
+ * Scala的解释器在解析函数参数(function arguments)时有两种方式：先计算参数表达式的值(reduce the arguments)，再应用到函数内部；
+ * 或者是将未计算的参数表达式直接应用到函数内部。前者叫做传值调用（call-by-value），后者叫做传名调用（call-by-name）。
  */
 object StringTest {
   var money = 10
@@ -14,71 +14,71 @@ object StringTest {
     val str1 = "scala";
     val str2 = "Welcome scala world!"
 
-    //intersect������������ַ�����ͬ��һ���ַ�
+    //intersect方法输出两个字符串共同的一组字符
     val retVal = str1.intersect(str2);
     println("intersect:" + retVal);
 
-    //toLowerCase ���Сд��ʽ
-    println("���Сд��ʽtoLowerCase��" + str1.toLowerCase());
+    //toLowerCase 输出小写形式
+    println("输出小写形式toLowerCase：" + str1.toLowerCase());
 
-    //toUpperCase �����д��ʽ
-    println("�����д��ʽtoUpperCase��" + str1.toUpperCase());
+    //toUpperCase 输出大写形式
+    println("输出大写形式toUpperCase：" + str1.toUpperCase());
 
-    //concat �ַ�������
+    //concat 字符串连接
     println("Hello ".concat(str1).concat("!"))
 
-    println("distinctȥ��:" + str1.distinct)
+    println("distinct去重:" + str1.distinct)
     println("get char:" + str1(1))
     println("scala patch:" + str1.patch(0, "K", 1))
 
 
-    //����ת��
+    //类型转换
     var a: Int = 11;
     var b: Long = a.toLong;
     var c: Double = b.toDouble;
     var d: String = c.toString;
-    println("����ת����" + c);
-    println("����ת����" + d);
+    println("类型转换：" + c);
+    println("类型转换：" + d);
 
-    //����������
+    //操作符重载
     //val e = 8 + 5;
     var e = (8).+(5)
-    println("����������:" + e)
+    println("操作符重载:" + e)
 
-    //�������ִ��η�ʽ
+    //测试两种传参方式
     transmitParaByName(num)
     transmitParaByValue(count)
   }
 
   /**
-   * ���ݲ�����ʽ�������ƴ���
+   * 传递参数方式：按名称传递
    * @param x
    */
   def transmitParaByName(x: => Int): Unit = {
     for (i <- 0 until 10) {
-      println("�����ƴ���:" + x)
+      println("按名称传参:" + x)
     }
   }
 
   /**
-   * ���ݲ�����ʽ:��ֵ����
+   * 传递参数方式:按值传递
    * @param x
    */
   def transmitParaByValue(x: Int): Unit = {
     for (i <- 0 until 10) {
-      println("��ֵ���Σ�" + x)
+      println("按值传参：" + x)
     }
   }
 
   /**
-   * ��һ�μ�1
+   * 喝一次减1
    */
   def drink: Unit = {
     money -= 1;
   }
 
   /**
-   * ����
+   * 计数
    * @return
    */
   def count: Int = {
@@ -86,3 +86,4 @@ object StringTest {
     money
   }
 }
+
