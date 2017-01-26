@@ -42,7 +42,20 @@ object HigherOrderFunc {
     val value15 = value13(14)
     //********闭包********
 
-    val value16 = (x: Int, y: Int) => x * y
+    //********柯里化*******
+    val value16 = (x: Int, y: Int) => x * y //接受两个参数的函数
+
+    val value17 = mulOneAtATime(6)(7) //计算两个数的乘积
+    val arr1 = Array("Hello", "World")
+    val arr2 = Array("hello1", "World")
+    val value18 = arr1.corresponds(arr2)(_.equalsIgnoreCase(_))
+
+    test1
+    val value19 = indexOf("hello", 'h')
+    //********柯里化*******
+
+
+
 
     println(value1)
     println(math.floor(num))
@@ -60,6 +73,9 @@ object HigherOrderFunc {
     println("闭包:" + value15)
 
     println(value16(3, 6))
+    println("计算两个数的乘积：" + value17)
+    println("Array柯里化corresponds是否一致：" + value18)
+    println("柯里化：" + value19)
   }
 
   def triple(x: Double) = 3 * x //等同于上面的匿名函数
@@ -79,4 +95,51 @@ object HigherOrderFunc {
    * @return
    */
   def mulBy(factor: Double) = (x: Double) => factor * x
+
+  /**
+   * 该函数接受一个参数，生成另一个接受单个参数的函数，柯里化函数
+   * @param x
+   * @return
+   */
+  def mulOneAtATime(x: Int) = (y: Int) => x * y
+
+  /**
+   * 简写
+   * @param x
+   * @param y
+   * @return
+   */
+  def mulOneAtATime2(x: Int)(y: Int) = x * y
+
+  def runInThread(block: () => Unit) {
+    new Thread {
+      override def run(): Unit = {
+        block
+      }
+    }.start()
+  }
+
+  def until(condition: => Boolean)(block: => Unit) {
+    if (!condition) {
+      block
+      until(condition)(block)
+    }
+  }
+
+  def test1: Unit = {
+    var x = 10
+    until(x == 0) {
+      x -= 1
+      println("柯里化：：：：" + x)
+    }
+  }
+
+  def indexOf(str: String, ch: Char): Int = {
+    var i = 0
+    until(i == str.length) {
+      if (str(i) == ch) return i
+      i += 1
+    }
+    return -1
+  }
 }
