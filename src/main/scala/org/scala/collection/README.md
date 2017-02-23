@@ -20,3 +20,6 @@ Set是一组没有先后次序的值。
 在SortedSet中，元素以某种排过序的顺序被访问。
 Map是一组（键值）对偶。
 SortedMap按照键的排序访问其中的实体。
+
+Scala优先采用不可变集合。scala.collection包中的伴生对象产出不可变的集合。举例说明，scala.collection.Map("Hello" ->"say")
+是一个不可变的映射。

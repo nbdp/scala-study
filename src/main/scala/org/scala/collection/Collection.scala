@@ -3,6 +3,7 @@ package org.scala.collection
 import scala.collection.{SortedMap, SortedSet}
 
 /**
+  * 统一创建原则
   * @author shijingui on 2017/2/23
   */
 object Collection {
