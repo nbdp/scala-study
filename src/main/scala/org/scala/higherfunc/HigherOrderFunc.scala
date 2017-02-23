@@ -20,7 +20,8 @@ object HigherOrderFunc {
 
     val value4 = valueAtOneQuarter(math.ceil _)
 
-    val value5 = mulBy(5) //高阶函数产出函数
+    val value5 = mulBy(5)
+    //高阶函数产出函数
     val value6 = value5(5)
 
     val value7 = valueAtOneQuarter(3 * _)
@@ -36,8 +37,10 @@ object HigherOrderFunc {
     val value11 = "Happy new year , what is you wish".split(" ").sortWith(_.length < _.length) //输出一个按长度递增排序的数组
 
     //********闭包********* 每一个返回的函数都有自己的factor的设置
-    val value12 = mulBy(3) //闭包
-    val value13 = mulBy(0.5) //闭包
+    val value12 = mulBy(3)
+    //闭包
+    val value13 = mulBy(0.5)
+    //闭包
     val value14 = value12(9)
     val value15 = value13(14)
     //********闭包********
@@ -45,7 +48,8 @@ object HigherOrderFunc {
     //********柯里化*******
     val value16 = (x: Int, y: Int) => x * y //接受两个参数的函数
 
-    val value17 = mulOneAtATime(6)(7) //计算两个数的乘积
+    val value17 = mulOneAtATime(6)(7)
+    //计算两个数的乘积
     val arr1 = Array("Hello", "World")
     val arr2 = Array("hello1", "World")
     val value18 = arr1.corresponds(arr2)(_.equalsIgnoreCase(_))
@@ -53,8 +57,6 @@ object HigherOrderFunc {
     test1
     val value19 = indexOf("hello", 'h')
     //********柯里化*******
-
-
 
 
     println(value1)
@@ -81,34 +83,38 @@ object HigherOrderFunc {
   def triple(x: Double) = 3 * x //等同于上面的匿名函数
 
   /**
-   * 代函数参数的函数，（参数类型）=>结果类型
-   * 由于该函数是一个接受函数参数的函数，因此它被称为高阶函数
-   * @param f
-   * @return
-   */
+    * 代函数参数的函数，（参数类型）=>结果类型
+    * 由于该函数是一个接受函数参数的函数，因此它被称为高阶函数
+    *
+    * @param f
+    * @return
+    */
   def valueAtOneQuarter(f: Double => Double) = f(0.01)
 
   /**
-   * 高阶函数也可以产出另一个函数
-   * 调用 mulBy(5)返回 (x:Double) =>5*x
-   * @param factor
-   * @return
-   */
+    * 高阶函数也可以产出另一个函数
+    * 调用 mulBy(5)返回 (x:Double) =>5*x
+    *
+    * @param factor
+    * @return
+    */
   def mulBy(factor: Double) = (x: Double) => factor * x
 
   /**
-   * 该函数接受一个参数，生成另一个接受单个参数的函数，柯里化函数
-   * @param x
-   * @return
-   */
+    * 该函数接受一个参数，生成另一个接受单个参数的函数，柯里化函数
+    *
+    * @param x
+    * @return
+    */
   def mulOneAtATime(x: Int) = (y: Int) => x * y
 
   /**
-   * 简写
-   * @param x
-   * @param y
-   * @return
-   */
+    * 简写
+    *
+    * @param x
+    * @param y
+    * @return
+    */
   def mulOneAtATime2(x: Int)(y: Int) = x * y
 
   def runInThread(block: () => Unit) {
