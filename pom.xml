@@ -8,7 +8,6 @@
     <packaging>jar</packaging>
 
     <name>scala-study</name>
-    <url>http://maven.apache.org</url>
 
     <properties>
         <jackson.version>2.4.2</jackson.version>
@@ -19,11 +18,11 @@
     </properties>
 
     <repositories>
-        <!--<repository>-->
-            <!--<id>scalaz</id>-->
-            <!--<name>scalaz</name>-->
-            <!--<url>http://dl.bintray.com/scalaz/releases</url>-->
-        <!--</repository>-->
+        <repository>
+            <id>scalaz</id>
+            <name>scalaz</name>
+            <url>http://dl.bintray.com/scalaz/releases</url>
+        </repository>
         <repository>
             <id>mvnrepository</id>
             <name>Derbysoft Release Repository</name>
@@ -31,11 +30,11 @@
         </repository>
 
 
-        <!--<repository>-->
-            <!--<id>jahia</id>-->
-            <!--<name>mvnrepository</name>-->
-            <!--<url>http://maven.jahia.org/maven2</url>-->
-        <!--</repository>-->
+        <repository>
+            <id>jahia</id>
+            <name>mvnrepository</name>
+            <url>http://maven.jahia.org/maven2</url>
+        </repository>
 
     </repositories>
 

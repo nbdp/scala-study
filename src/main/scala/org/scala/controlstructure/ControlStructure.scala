@@ -1,10 +1,10 @@
 package org.scala.controlstructure
 
 /**
- * 控制结构和函数
- * User: shijingui
- * Date: 2017/2/4
- */
+  * 控制结构和函数
+  * User: shijingui
+  * Date: 2017/2/4
+  */
 object ControlStructure {
 
   def main(args: Array[String]) {
@@ -27,5 +27,12 @@ object ControlStructure {
     for (i <- 1 to 3; j <- 1 to 3 if i != j) println((i * 10 + j) + " ") //使用守卫条件判断
     for (i <- 1 to 10) yield i * 10 // 循环体一yield开始，则该循环会构造一个集合，每次迭代生成集合中的一个值，这类循环叫for推导式
 
+    println(addOne(32))
+
+  }
+
+  def addOne(num: Int): Int = {
+    println(num)
+    num + 1
   }
 }
