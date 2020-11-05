@@ -28,7 +28,6 @@ object ControlStructure {
     for (i <- 1 to 10) yield i * 10 // 循环体一yield开始，则该循环会构造一个集合，每次迭代生成集合中的一个值，这类循环叫for推导式
 
     println(addOne(32))
-
   }
 
   def addOne(num: Int): Int = {
