@@ -2,7 +2,7 @@ package org.scala.controlstructure
 
 /**
   * 控制结构和函数
-  * User: shijingui
+  * User: krisjin
   * Date: 2017/2/4
   */
 object ControlStructure {

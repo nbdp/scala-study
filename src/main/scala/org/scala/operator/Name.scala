@@ -2,7 +2,7 @@ package org.scala.operator
 
 /**
  * Name 字符串提取器
- * User: shijingui
+ * User: krisjin
  * Date: 2017/1/25
  */
 object Name {

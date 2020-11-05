@@ -5,7 +5,7 @@ import scala.util.Sorting
 
 /**
  * ����ʾ������
- * User: shijingui
+ * User: krisjin
  * Date: 2017/1/23
  */
 object ArrayTest {

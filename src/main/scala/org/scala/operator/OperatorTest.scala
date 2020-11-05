@@ -6,7 +6,7 @@ import scala.collection.mutable
 /**
  * 操作符
  * 变量，函数，类等都成为标识符
- * User: shijingui
+ * User: krisjin
  * Date: 2017/1/25
  */
 object OperatorTest {

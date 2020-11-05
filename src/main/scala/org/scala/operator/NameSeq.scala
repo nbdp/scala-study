@@ -3,7 +3,7 @@ package org.scala.operator
 
 /**
  * 提取序列
- * User: shijingui
+ * User: krisjin
  * Date: 2017/1/25
  */
 object NameSeq {

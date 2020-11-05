@@ -2,7 +2,7 @@ package org.scala.higherfunc
 
 /** 高阶函数
   * _可以将方法转换成函数
-  * User: shijingui
+  * User: krisjin
   * Date: 2017/1/25
   */
 object HigherOrderFunc {

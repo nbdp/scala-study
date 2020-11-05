@@ -3,7 +3,7 @@ package org.scala.operator
 
 /**
  * 分数
- * User: shijingui
+ * User: krisjin
  * Date: 2017/1/25
  */
 class Fraction(n: Int, d: Int) {
