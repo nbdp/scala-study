@@ -1,4 +1,4 @@
-package org.scala.operator
+package org.scala.example.operator
 
 /**
  * unapply 作为测试方法

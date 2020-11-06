@@ -1,4 +1,4 @@
-package org.scala.string
+package org.scala.example.string
 
 /**
  * String operate use

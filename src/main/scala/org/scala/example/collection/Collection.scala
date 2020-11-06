@@ -1,4 +1,4 @@
-package org.scala.collection
+package org.scala.example.collection
 
 import scala.collection.{SortedMap, SortedSet}
 

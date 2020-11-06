@@ -1,4 +1,4 @@
-package org.scala.operator
+package org.scala.example.operator
 
 
 import scala.collection.mutable

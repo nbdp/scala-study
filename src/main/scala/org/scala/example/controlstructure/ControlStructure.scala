@@ -1,4 +1,4 @@
-package org.scala.controlstructure
+package org.scala.example.controlstructure
 
 /**
   * 控制结构和函数

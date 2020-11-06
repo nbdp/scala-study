@@ -1,4 +1,4 @@
-package org.scala.operator
+package org.scala.example.operator
 
 /**
  * Name 字符串提取器

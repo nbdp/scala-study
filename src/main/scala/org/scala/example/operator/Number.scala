@@ -1,4 +1,4 @@
-package org.scala.operator
+package org.scala.example.operator
 
 /**
  * 单参数数字提取器

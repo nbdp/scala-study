@@ -1,4 +1,4 @@
-package org.scala.higherfunc
+package org.scala.example.higherfunc
 
 /** 高阶函数
   * _可以将方法转换成函数

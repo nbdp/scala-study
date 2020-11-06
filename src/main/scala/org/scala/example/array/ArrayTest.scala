@@ -1,4 +1,4 @@
-package org.scala.array
+package org.scala.example.array
 
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Sorting
