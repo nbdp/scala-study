@@ -1,4 +1,4 @@
-package org.scala.example.string
+package org.scala.example
 
 /**
  * String operate use
@@ -52,6 +52,7 @@ object StringTest {
 
   /**
    * 传递参数方式：按名称传递
+   *
    * @param x
    */
   def transmitParaByName(x: => Int): Unit = {
@@ -62,6 +63,7 @@ object StringTest {
 
   /**
    * 传递参数方式:按值传递
+   *
    * @param x
    */
   def transmitParaByValue(x: Int): Unit = {
@@ -79,11 +81,29 @@ object StringTest {
 
   /**
    * 计数
+   *
    * @return
    */
   def count: Int = {
     drink
     money
   }
-}
 
+  //多行字符
+  val lines =
+    """111
+      |dddd
+      |ddddd
+      |eee
+      |ddd
+      |""".stripMargin
+
+
+  val name = "kris"
+
+  var str = s"hello,${name}"
+
+  println(str)
+
+  print(lines)
+}
